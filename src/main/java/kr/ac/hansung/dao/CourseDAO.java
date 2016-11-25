@@ -21,12 +21,12 @@ public class CourseDAO {
 		this.jdbcTemplateObject = new JdbcTemplate(dataSource);
 	}
 	
-	public int getRowCount() { //행의 개수 출력
+	public int getRowCount() {
 		String sqlStatement = "select count(*) from takingcourse";
 		return jdbcTemplateObject.queryForObject(sqlStatement, Integer.class);
 	}
 	
-	public int getSumCredit() { //총학점 조회
+	public int getSumCredit() {
 		String sqlStatement = "select sum(credit) from takingcourse";
 		int total = jdbcTemplateObject.queryForObject(sqlStatement,Integer.class);
 		return total;
@@ -58,6 +58,7 @@ public class CourseDAO {
 			}
 		});
 	}
+	
 	public List<Course> getYearSemesterSum() {
 		String sqlStatement = "select year, semester, sum(credit) from takingcourse group by year, semester";
 		return jdbcTemplateObject.query(sqlStatement, new RowMapper<Course>() {
