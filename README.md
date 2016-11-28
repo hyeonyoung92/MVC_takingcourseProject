@@ -4,7 +4,7 @@ MVC_takingcourseProject
 ## 해야할 것
 
 1) 본인이 지금까지 수강한 교과목을 MySQL DB에 저장한다.
-![Image](https://github.com/hyeonyoung92/hw1.JPG)
+![Image](https://github.com/hyeonyoung92/MVC_takingcourseSystem/hw1.JPG)
 구분(전선, 전기, 전지, 일교, 핵교A, 핵교B, 교필 등)
 
 
